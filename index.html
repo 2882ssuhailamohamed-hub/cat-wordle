@@ -1,0 +1,57 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat Wordle 🐱 </title>
+    <link rel="stylesheet" href="style.css">
+   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐱</text></svg>">
+</head>
+ -->
+</head>
+<body>
+  <div class="container">
+    <!--Hader-->
+    <header>
+        <div class="header-content">
+            <h1>
+                <i class="fas fa-paw">
+
+                </i>
+                Cat Wordle <span class="cat-emoji">🐱</span>
+            </h1>
+            <p class="subtitle">
+                Build the cute cat with each guess!
+            </p>
+        </div>
+        <div class="header-buttons">
+            <button id="hint-but" class="icon-btn" title="Get a hint">
+                <i class="fas fa-lightbuld">
+                </i>
+            </button>
+            <button id="setting-but" class="icon-btn" title="settings">
+            </button>
+        </div>
+    </header>
+    <!-- Cat scence Display-->
+     <div class="cat-scene-container">
+        <div class="scence-title">
+            <h2><i class="fas fa-cat"></i>Cat Café Progress</h2>
+            <div class="stage-indicator">stage: <span id="stage">1</span>/6</div>
+        </div>
+        <div class="cat-scene" id="cat-scene">
+            <!--Cat SVG will be geneated by javascript-->
+        </div>
+        <div class="scence massage" id="scence-message">
+            The cat bed is empty...guess letters to attract a cat! 🛏️
+        </div>
+     </div>
+     
+  </div>  
+</body>
+</html>
