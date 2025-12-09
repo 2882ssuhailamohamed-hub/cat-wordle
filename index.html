@@ -124,5 +124,36 @@
         <span id="hint-text">The word is 5 letters long</span>
     </div>
   </div>
+  <!--Win/Lose Modal-->
+  <div class="modal" id="result-modal">
+    <div class="modal-content">
+        <div id="result-icon">🐱</div>
+        <h2 id="result-title">Result</h2>
+        <div id="result-message"></div>
+        <div class="result-word"></div>
+        The word was: <span id="result-word-text"></span>
+    </div>
+    <div class="result-stats">
+        <div class="stat-item">
+            <span class="stat-label">Attempts:</span>
+            <span id="result-attemps"></span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-label">Time:</span>
+            <span id="result-time">0s</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-label">Score:</span>
+            <span id="result-score">0</span>
+        </div>
+    </div>
+    <button id="play-again" class="primary-btn">
+        <i class="fas fa-play"></i> Play Again 
+    </button>
+    <button id="share-result" class="secondary-btn">
+        <i class="fas fa-share"></i> Share Result
+    </button>
+    
+  </div>
 </body>
 </html>
