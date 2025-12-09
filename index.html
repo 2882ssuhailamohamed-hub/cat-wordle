@@ -153,7 +153,41 @@
     <button id="share-result" class="secondary-btn">
         <i class="fas fa-share"></i> Share Result
     </button>
-    
+    <!--Help Modal-->
+    <div class="modal" id="help-modal">
+        <div class="modal-content">
+            <h2><i class="fas fa-question-circle"></i> How to Play Cat Wordle   
+            </h2>
+            <div class="rules">
+                <div class="rule">
+                    <div class="rule-icon">🐱</div>
+                    <p>Guess the<strong> 5-letter word</strong> in 6 tries or less</p>
+                </div>
+                <div class="tile-example correct">A</div>
+                <p><span class="color-name pink">Pink</span>
+                = Letter is correct and in the right spot</p>
+            </div>
+            <div class="rule">
+                <div class="tile-example present">B</div>
+                <p><span class="color-name purple">Purple</span> 
+                    = Letter is in the word but wrong spot</p>
+            </div>
+            <div class="rule">
+                <div class="tile-example absent">C</div>
+                <p><span class="color-name gray">Gray</span>
+                = Letter is not the word</p>
+            </div>
+            <div class="rule">
+                <div class="rule icon">🏗️</div>
+                <p>Each correct guess <strong>builds the cat scene</strong>!</p>
+            </div>
+            <div class="rule">
+                <div class="rule-icon">🎮</div>
+                <p>Use keyboard or click the on screen keys</p>
+            </div>
+        </div>
+        <button class="primary-btn close-modal"> Got it! let's play 🐾</button>
+    </div>
   </div>
 </body>
 </html>
