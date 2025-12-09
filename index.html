@@ -8,11 +8,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cat Wordle 🐱 </title>
     <link rel="stylesheet" href="style.css">
-   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐱</text></svg>">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐱</text></svg>"
 </head>
- -->
+ 
 </head>
 <body>
   <div class="container">
@@ -188,6 +188,38 @@
         </div>
         <button class="primary-btn close-modal"> Got it! let's play 🐾</button>
     </div>
+    <!--Stats Modal -->
+    <div class="modal" id="stats-modal">
+        <div class="modal-content">
+            <h2><i class="fas fa-chart-bar"></i> Your Cat Wordle Status</h2>
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <div class="stat-value" id="games-played">0</div>
+                    <div class="stat-lable">Game Played</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-value" id="gams-won">0</div>
+                    <div class="stat-label"> Game Won</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-value" id="current-streak">0</div>
+                    <div class="stat-label">Current Streak</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-value" id="max-streak">0</div>
+                    <div class="stat-label"> Max Streak</div>
+                </div>
+            </div>
+            <div class="win-percentage">
+                Win Percentage: <span id="win-percentage">0%</span>
+            </div>
+            <div class="distribution">
+                <h3>Guess distribution</h3>
+                <div id="guess-distribution"></div>
+            </div>
+            <button class="primary-btn close-modal">Close</button>
+        </div> </div>
   </div>
+  
 </body>
 </html>
