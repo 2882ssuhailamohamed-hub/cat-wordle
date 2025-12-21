@@ -169,3 +169,15 @@ h1 {
     background: #fff0f5;
     transform: translateY(-2px);
 }
+
+/* Enter key */
+.key.enter {
+    background: #8a6bc9;
+    color: white;
+    min-width: 200px;
+    border-color: #8a6bc9;
+}
+
+.key.enter:hover {
+    background: #a28cd9;
+}
