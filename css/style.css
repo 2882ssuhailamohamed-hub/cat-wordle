@@ -149,3 +149,23 @@ h1 {
     gap: 5px;
     margin: 8px 0;
 }
+
+
+/* Keyboard keys */
+.key {
+    background: white;
+    border: 2px solid #ffb6c1;
+    border-radius: 8px;
+    padding: 12px 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ff6b9d;
+    cursor: pointer;
+    min-width: 40px;
+    transition: all 0.2s;
+}
+
+.key:hover {
+    background: #fff0f5;
+    transform: translateY(-2px);
+}
