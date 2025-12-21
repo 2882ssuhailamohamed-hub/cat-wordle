@@ -210,3 +210,11 @@ button:hover {
     transform: translateY(-3px);
     background: #ff8ab3;
 }
+/* Hint button */
+.hint {
+    background: #8a6bc9;
+}
+
+.hint:hover {
+    background: #a28cd9;
+}
