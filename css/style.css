@@ -37,3 +37,16 @@ h1 {
     margin-bottom: 20px;
     font-size: 1.2rem;
 }
+/* Cat scene display */
+.cat-scene {
+    background: #fff8e7;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px 0;
+    border: 3px dashed #ffb6c1;
+    min-height: 150px;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
