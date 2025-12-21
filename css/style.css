@@ -103,3 +103,11 @@ h1 {
     border-color: #8a6bc9;
     transform: scale(1.05);
 }
+
+/* Wrong letter */
+.tile.absent {
+    background: #f0f0f0;
+    color: #999;
+    border-color: #ccc;
+}
+
