@@ -138,3 +138,14 @@ h1 {
     color: #8a6bc9;
 }
 
+/* Keyboard */
+.keyboard {
+    margin: 20px 0;
+}
+
+.keyboard-row {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin: 8px 0;
+}
