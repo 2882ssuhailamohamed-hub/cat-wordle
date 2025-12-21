@@ -181,3 +181,32 @@ h1 {
 .key.enter:hover {
     background: #a28cd9;
 }
+
+/* Used keys */
+.key.used {
+    background: #f0f0f0;
+    color: #999;
+    border-color: #ccc;
+}
+/* Control buttons */
+.controls {
+    margin-top: 20px;
+}
+
+button {
+    background: #ff6b9d;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: all 0.2s;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    background: #ff8ab3;
+}
