@@ -14,3 +14,14 @@ body {
     align-items: center;
     padding: 20px;
 }
+/* Main container */
+.container {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 10px 30px rgba(255, 182, 193, 0.3);
+    text-align: center;
+    border: 5px solid #ffb6c1;
+}
