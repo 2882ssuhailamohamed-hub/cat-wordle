@@ -50,3 +50,17 @@ h1 {
     align-items: center;
     justify-content: center;
 }
+
+/* Message display */
+.message {
+    background: #ffd6e7;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 15px 0;
+    font-weight: bold;
+    color: #ff6b9d;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
