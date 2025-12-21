@@ -25,3 +25,9 @@ body {
     text-align: center;
     border: 5px solid #ffb6c1;
 }
+/* Title */
+h1 {
+    color: #ff6b9d;
+    margin-bottom: 10px;
+    font-size: 2.5rem;
+}
