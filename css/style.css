@@ -96,3 +96,10 @@ h1 {
     border-color: #ff6b9d;
     transform: scale(1.05);
 }
+/* Correct letter in wrong position */
+.tile.present {
+    background: #e6d4ff;
+    color: #8a6bc9;
+    border-color: #8a6bc9;
+    transform: scale(1.05);
+}
