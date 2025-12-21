@@ -111,3 +111,30 @@ h1 {
     border-color: #ccc;
 }
 
+
+/* Game info display */
+.game-info {
+    display: flex;
+    justify-content: space-between;
+    background: #fff0f5;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.info-box {
+    text-align: center;
+}
+
+.info-label {
+    color: #ff6b9d;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.info-value {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #8a6bc9;
+}
+
