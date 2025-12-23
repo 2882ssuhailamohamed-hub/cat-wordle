@@ -504,7 +504,7 @@ function resetGame() {
     };
             
     
-]
+
     selectRandomWord();
     
  
