@@ -243,6 +243,21 @@ function gameLost() {
     updateKeyboard();
     updateUI();
 
+$     // Disable keyboard
+    disableGameControls();
+}
+
+// Disable game controls
+function disableGameControls() {
+    document.querySelectorAll('.key').forEach(key => {
+        key.disabled = true;
+    });
+    elements.hintBtn.disabled = true;
+    elements.enter.disabled = true;
+    elements.backspace.disabled = true;
+}
+
+
 
 
 
