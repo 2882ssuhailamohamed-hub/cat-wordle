@@ -25,3 +25,37 @@ const CAT_MESSAGES = [
     "Look! The cat is wearing a pretty pink bow! 🎀",
     "Purr-fect! The cat is so happy and giving you hearts! 💖"
 ];
+
+// Game State
+let gameState = {
+    word: '',
+    guesses: [],
+    currentGuess: '',
+    attemptsLeft: CONFIG.MAX_ATTEMPTS,
+    gameOver: false,
+    gameWon: false,
+    score: 0,
+    stage: 1,
+    usedLetters: new Set(),
+    startTime: null,
+    timer: null,
+    elapsedTime: 0
+};
+
+
+
+// DOM Elements
+const elements = {
+    wordDisplay: document.getElementById('word-display'),
+    catScene: document.getElementById('cat-scene'),
+    message: document.getElementById('message'),
+    attempts: document.getElementById('attempts'),
+    score: document.getElementById('score'),
+    stage: document.getElementById('stage'),
+    hintBtn: document.getElementById('hint'),
+    newGameBtn: document.getElementById('new-game'),
+    enter: document.getElementById('enter'),
+    backspace: document.getElementById('backspace')
+};
+
+
