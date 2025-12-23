@@ -455,6 +455,30 @@ function getFeedbackMessage(guess) {
         return `Good! ${correctLetters.size} letter(s) are in the word! 👏`;
     }
 }
+// Give hint
+function giveHint() {
+    if (gameState.gameOver) {
+        showMessage("Game over! Start a new game for a hint. 🎮", "error");
+        return;
+    }
+    
+    if (gameState.guesses.length === 0) {
+        showMessage("Try at least one guess first! 😺", "info");
+        return;
+    }
+    
+    // Find an unguessed letter in the target word
+    const guessedLetters = new Set();
+    gameState.guesses.forEach(guess => {
+        guess.split('').forEach(letter => guessedLetters.add(letter));
+    });
+    
+    const unguessedLetters = gameState.word.split('').filter(letter => !guessedLetters.has(letter));
+    
+    if (unguessedLetters.length > 0) {
+        const hintLetter = unguessedLetters[Math.floor(Math.random() * unguessedLetters.length)];
+        const position = gameState.word.indexOf(hintLetter) + 1;
+        showMessage(`Hint: The letter "${hintLetter}" is in position ${position} 🐾`, "info");
 
     
 
