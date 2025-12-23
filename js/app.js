@@ -309,6 +309,58 @@ function updateCatScene() {
 
 
 
+// Render word display - FIXED VERSION
+function renderWordDisplay() {
+    elements.wordDisplay.innerHTML = '';
+    
+    // Render previous guesses
+    gameState.guesses.forEach(guess => {
+        const row = document.createElement('div');
+        row.className = 'word-row';
+        
+        for (let i = 0; i < CONFIG.WORD_LENGTH; i++) {
+            const tile = document.createElement('div');
+            tile.className = 'tile';
+            
+            if (guess[i] === gameState.word[i]) {
+                tile.classList.add('correct');
+            } else if (gameState.word.includes(guess[i])) {
+                tile.classList.add('present');
+            } else {
+                tile.classList.add('absent');
+            }
+            
+            tile.textContent = guess[i];
+            row.appendChild(tile);
+        }
+        
+        elements.wordDisplay.appendChild(row);
+    });
+    
+    // Render current guess
+    if (!gameState.gameOver && gameState.currentGuess.length > 0) {
+        const row = document.createElement('div');
+        row.className = 'word-row';
+        
+        for (let i = 0; i < CONFIG.WORD_LENGTH; i++) {
+            const tile = document.createElement('div');
+            tile.className = 'tile';
+            
+            if (i < gameState.currentGuess.length) {
+                tile.textContent = gameState.currentGuess[i];
+                tile.classList.add('filled');
+            }
+            
+            row.appendChild(tile);
+        }
+        
+        elements.wordDisplay.appendChild(row);
+    }
+    
+
+
+
+
 
 
 
