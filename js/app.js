@@ -174,6 +174,13 @@ function submitGuess() {
         gameWon();
         return;
     }
+
+
+
+    // Update attempts
+    gameState.attemptsLeft--;
+    elements.attempts.textContent = gameState.attemptsLeft;
+
     
 
 
