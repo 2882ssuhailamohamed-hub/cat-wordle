@@ -504,7 +504,31 @@ function resetGame() {
         timer: null,
         elapsedTime: 0
     };
+            
     
+    // Select new word
+    selectRandomWord();
+    
+    // Reset UI
+    elements.attempts.textContent = gameState.attemptsLeft;
+    elements.score.textContent = gameState.score;
+    elements.stage.textContent = gameState.stage;
+    
+    renderWordDisplay();
+    updateCatScene();
+    updateUI();
+    updateKeyboard();
+    elements.message.textContent = '';
+    
+    // Enable keyboard
+    enableGameControls();
+    
+    showMessage("New game! Guess a 5-letter cat word. 🐱", "info");
+}
+
+// Initialize game when page loads
+window.addEventListener('DOMContentLoaded', initGame);
+
 
     
 
