@@ -59,3 +59,17 @@ const elements = {
 };
 
 
+
+
+
+// Initialize Game
+function initGame() {
+    selectRandomWord();
+    setupEventListeners();
+    renderWordDisplay();
+    updateCatScene();
+    updateUI();
+    showMessage("Welcome to Cat Wordle! Guess a 5-letter cat word. 🐱", "info");
+}
+
+
