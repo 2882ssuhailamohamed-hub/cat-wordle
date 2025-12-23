@@ -356,6 +356,27 @@ function renderWordDisplay() {
         
         elements.wordDisplay.appendChild(row);
     }
+
+
+        // Add empty rows for remaining attempts
+    if (!gameState.gameOver) {
+        const rowsToShow = gameState.attemptsLeft - (gameState.currentGuess.length > 0 ? 1 : 0);
+        
+        for (let row = 0; row < rowsToShow; row++) {
+            const emptyRow = document.createElement('div');
+            emptyRow.className = 'word-row';
+            
+            for (let i = 0; i < CONFIG.WORD_LENGTH; i++) {
+                const tile = document.createElement('div');
+                tile.className = 'tile';
+                emptyRow.appendChild(tile);
+            }
+            
+            elements.wordDisplay.appendChild(emptyRow);
+        }
+    }
+}
+
     
 
 
