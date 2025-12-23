@@ -257,7 +257,28 @@ function disableGameControls() {
     elements.backspace.disabled = true;
 }
 
-\\\\\\\\\\\\\\
+// Enable game controls
+function enableGameControls() {
+    document.querySelectorAll('.key').forEach(key => {
+        key.disabled = false;
+        key.classList.remove('correct', 'present', 'absent', 'used');
+    });
+    elements.hintBtn.disabled = false;
+    elements.enter.disabled = false;
+    elements.backspace.disabled = false;
+}
+
+// Count correct positions in guess
+function countCorrectPositions(guess) {
+    let count = 0;
+    for (let i = 0; i < CONFIG.WORD_LENGTH; i++) {
+        if (guess[i] === gameState.word[i]) {
+            count++;
+        }
+    }
+    return count;
+}
+
 
 
 
