@@ -284,6 +284,34 @@ function countCorrectPositions(guess) {
 
 
 
+// Update cat stage
+function updateCatStage(isWin) {
+    if (isWin) {
+        gameState.stage = CONFIG.CAT_STAGES;
+    } else {
+        // Calculate stage based on correct letters in all guesses
+        let totalCorrect = 0;
+        gameState.guesses.forEach(guess => {
+            totalCorrect += countCorrectPositions(guess);
+        });
+        
+        // Each correct letter advances stage (max 6 stages)
+        gameState.stage = Math.min(CONFIG.CAT_STAGES, Math.floor(totalCorrect / 2) + 1);
+    }
+    updateCatScene();
+}
+
+// Update cat scene display
+function updateCatScene() {
+    elements.catScene.textContent = CAT_MESSAGES[gameState.stage - 1];
+    elements.stage.textContent = gameState.stage;
+}
+
+
+
+
+
+
 
 
 
