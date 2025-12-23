@@ -166,3 +166,14 @@ function submitGuess() {
     gameState.guesses.push(guess);
 
 
+
+
+
+        // Check win condition
+    if (guess === gameState.word) {
+        gameWon();
+        return;
+    }
+    
+
+
