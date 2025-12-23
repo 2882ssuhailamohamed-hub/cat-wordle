@@ -525,7 +525,7 @@ function resetGame() {
 }
 
 
-
+window.addEventListener('DOMContentLoaded', initGame);
 
 
 
