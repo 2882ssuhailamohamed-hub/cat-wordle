@@ -1,4 +1,4 @@
-/*---------------------------------- Reset and basic setup -------------------------*/
+
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +6,7 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Body styling */
+
 body {
     background: linear-gradient(135deg, #ffd6e7 0%, #e6d4ff 100%);
     min-height: 100vh;
@@ -16,7 +16,7 @@ body {
     padding: 20px;
 }
 
-/* Main container */
+
 .container {
     background: white;
     border-radius: 20px;
@@ -29,7 +29,7 @@ body {
     animation: fadeIn 0.5s ease;
 }
 
-/* Title */
+
 h1 {
     color: #ff6b9d;
     margin-bottom: 10px;
@@ -38,7 +38,7 @@ h1 {
     animation: slideDown 0.6s ease;
 }
 
-/* Subtitle */
+
 .subtitle {
     color: #8a6bc9;
     margin-bottom: 20px;
@@ -46,7 +46,7 @@ h1 {
     animation: slideDown 0.7s ease;
 }
 
-/* Cat scene display */
+
 .cat-scene {
     background: #fff8e7;
     border-radius: 15px;
@@ -63,7 +63,7 @@ h1 {
     box-shadow: 0 5px 15px rgba(255, 182, 193, 0.2);
 }
 
-/* Message display */
+
 .message {
     background: #ffd6e7;
     padding: 15px;
@@ -79,7 +79,7 @@ h1 {
     border: 2px solid #ffb6c1;
 }
 
-/* Word display area */
+
 .word-display {
     display: flex;
     justify-content: center;
@@ -88,7 +88,7 @@ h1 {
     flex-wrap: wrap;
 }
 
-/* Individual tile */
+
 .tile {
     width: 60px;
     height: 60px;
@@ -104,14 +104,14 @@ h1 {
     animation: fadeIn 0.3s ease;
 }
 
-/* Filled tile */
+
 .tile.filled {
     animation: popIn 0.2s ease;
     border-color: #ff8ab3;
     background-color: #fff0f5;
 }
 
-/* Correct letter in correct position */
+
 .tile.correct {
     background: #ffd6e7;
     color: #ff6b9d;
@@ -121,7 +121,7 @@ h1 {
     animation: pop 0.5s ease forwards;
 }
 
-/* Correct letter in wrong position */
+
 .tile.present {
     background: #e6d4ff;
     color: #8a6bc9;
@@ -130,14 +130,14 @@ h1 {
     box-shadow: 0 0 15px rgba(138, 107, 201, 0.3);
 }
 
-/* Wrong letter */
+
 .tile.absent {
     background: #f0f0f0;
     color: #999;
     border-color: #ccc;
 }
 
-/* Game info display */
+
 .game-info {
     display: flex;
     justify-content: space-between;
@@ -168,7 +168,7 @@ h1 {
     text-shadow: 1px 1px 0px rgba(138, 107, 201, 0.2);
 }
 
-/* Keyboard */
+
 .keyboard {
     margin: 20px 0;
     animation: slideUp 0.6s ease;
@@ -181,7 +181,7 @@ h1 {
     margin: 8px 0;
 }
 
-/* Keyboard keys */
+
 .key {
     background: white;
     border: 2px solid #ffb6c1;
@@ -202,28 +202,28 @@ h1 {
     box-shadow: 0 3px 8px rgba(255, 182, 193, 0.3);
 }
 
-/* Correct key */
+
 .key.correct {
     background: #ffd6e7;
     color: #ff6b9d;
     border-color: #ff6b9d;
 }
 
-/* Present key */
+
 .key.present {
     background: #e6d4ff;
     color: #8a6bc9;
     border-color: #8a6bc9;
 }
 
-/* Absent/used key */
+
 .key.absent, .key.used {
     background: #f0f0f0;
     color: #999;
     border-color: #ccc;
 }
 
-/* Enter key */
+
 .key.enter {
     background: #8a6bc9;
     color: white;
@@ -239,13 +239,13 @@ h1 {
     box-shadow: 0 3px 8px rgba(138, 107, 201, 0.3);
 }
 
-/* Backspace key */
+
 #backspace {
     font-size: 1.5rem;
     padding: 12px 20px;
 }
 
-/* Disabled keys */
+
 .key:disabled, button:disabled {
     opacity: 0.5 !important;
     cursor: not-allowed !important;
@@ -253,7 +253,7 @@ h1 {
     box-shadow: none !important;
 }
 
-/* Control buttons */
+
 .controls {
     margin-top: 20px;
     animation: slideUp 0.7s ease;
@@ -280,7 +280,7 @@ button:hover:not(:disabled) {
     box-shadow: 0 6px 12px rgba(255, 107, 157, 0.3);
 }
 
-/* Hint button */
+
 .hint {
     background: #8a6bc9;
 }
@@ -290,7 +290,7 @@ button:hover:not(:disabled) {
     box-shadow: 0 6px 12px rgba(138, 107, 201, 0.3);
 }
 
-/* New Game button */
+
 #new-game {
     background: #ff9d6b;
 }
@@ -300,12 +300,12 @@ button:hover:not(:disabled) {
     box-shadow: 0 6px 12px rgba(255, 157, 107, 0.3);
 }
 
-/* Shake animation for wrong input */
+
 .shake {
     animation: shake 0.5s ease;
 }
 
-/* Animations */
+
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
@@ -378,21 +378,21 @@ button:hover:not(:disabled) {
     20%, 40%, 60%, 80% { transform: translateX(5px); }
 }
 
-/* Success message color */
+
 .message[style*="color: #44aa44"] {
     background: #d4ffd4;
     border-color: #44aa44;
     color: #2d7a2d !important;
 }
 
-/* Error message color */
+
 .message[style*="color: #ff4444"] {
     background: #ffd4d4;
     border-color: #ff4444;
     color: #cc0000 !important;
 }
 
-/* Mobile responsive */
+
 @media (max-width: 600px) {
     .container {
         padding: 20px;
@@ -464,7 +464,7 @@ button:hover:not(:disabled) {
     }
 }
 
-/* Small phone responsive */
+
 @media (max-width: 400px) {
     .tile {
         width: 45px;
@@ -492,7 +492,7 @@ button:hover:not(:disabled) {
     }
 }
 
-/* Hide keyboard for one-shot version */
+
 .keyboard.hidden {
     display: none;
 }
