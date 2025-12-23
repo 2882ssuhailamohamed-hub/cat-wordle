@@ -376,6 +376,46 @@ function renderWordDisplay() {
         }
     }
 }
+// Update keyboard colors
+function updateKeyboard() {
+    document.querySelectorAll('.key[data-key]').forEach(key => {
+        const letter = key.dataset.key;
+        
+        // Reset classes
+        key.className = 'key';
+        
+        if (gameState.usedLetters.has(letter)) {
+            key.classList.add('used');
+            
+            if (gameState.word.includes(letter)) {
+                // Check if it's in correct position in any guess
+                let isCorrect = false;
+                for (const guess of gameState.guesses) {
+                    for (let i = 0; i < CONFIG.WORD_LENGTH; i++) {
+                        if (guess[i] === letter && gameState.word[i] === letter) {
+                            isCorrect = true;
+                            break;
+                        }
+                    }
+                    if (isCorrect) break;
+                }
+                
+                if (isCorrect) {
+                    key.classList.add('correct');
+                } else {
+                    key.classList.add('present');
+                }
+            } else {
+                key.classList.add('absent');
+            }
+        }
+    });
+}
+
+// Update UI
+function updateUI() {
+    elements.score.textContent = gameState.score;
+}
 
     
 
