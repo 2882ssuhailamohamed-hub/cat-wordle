@@ -181,6 +181,11 @@ function submitGuess() {
     gameState.attemptsLeft--;
     elements.attempts.textContent = gameState.attemptsLeft;
 
-    
+    // Update cat stage based on correct letters
+    const correctPositions = countCorrectPositions(guess);
+    if (correctPositions > 0) {
+        updateCatStage(false);
+    }
+
 
 
