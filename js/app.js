@@ -157,4 +157,12 @@ function submitGuess() {
         return;
     }
 
+        // Check if already guessed this word
+    if (gameState.guesses.includes(guess)) {
+        showMessage("You already tried that word! 😅", "error");
+        return;
+    }
+    
+    gameState.guesses.push(guess);
+
 
