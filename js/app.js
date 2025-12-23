@@ -218,6 +218,34 @@ function gameWon() {
     // Show win message
     showMessage(`🎉 You won! The word was ${gameState.word}! 🐱`, "success");
 
+     // Update UI
+    gameState.currentGuess = '';
+    renderWordDisplay();
+    updateKeyboard();
+    updateCatScene();
+    updateUI();
+    
+    // Disable keyboard
+    disableGameControls();
+}
+
+// Handle lose
+function gameLost() {
+    gameState.gameOver = true;
+    
+    // Show lose message
+    showMessage(`😿 Game over! The word was ${gameState.word}.`, "error");
+
+
+        // Update UI
+    gameState.currentGuess = '';
+    renderWordDisplay();
+    updateKeyboard();
+    updateUI();
+
+
+
+
 
 
 
