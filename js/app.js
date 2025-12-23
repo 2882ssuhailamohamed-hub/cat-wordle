@@ -417,6 +417,45 @@ function updateUI() {
     elements.score.textContent = gameState.score;
 }
 
+
+// Show message
+function showMessage(text, type) {
+    elements.message.textContent = text;
+    elements.message.className = 'message';
+    
+    if (type === 'error') {
+        elements.message.classList.add('error-message');
+    } else if (type === 'success') {
+        elements.message.classList.add('success-message');
+    } else {
+        elements.message.classList.remove('error-message', 'success-message');
+    }
+}
+
+// Get feedback message
+function getFeedbackMessage(guess) {
+    const correctPositions = countCorrectPositions(guess);
+    const correctLetters = new Set();
+    
+    for (let i = 0; i < CONFIG.WORD_LENGTH; i++) {
+        if (gameState.word.includes(guess[i])) {
+            correctLetters.add(guess[i]);
+        }
+    }
+    
+    if (correctPositions === 0 && correctLetters.size === 0) {
+        return "No matches. Keep trying! 💪";
+    } else if (correctPositions >= 3) {
+        return "Almost there! So many correct letters! ✨";
+    } else if (correctLetters.size >= 3) {
+        return "Good! Several correct letters! 🌟";
+    } else if (correctPositions > 0) {
+        return `Nice! ${correctPositions} letter(s) in the right spot! 👍`;
+    } else {
+        return `Good! ${correctLetters.size} letter(s) are in the word! 👏`;
+    }
+}
+
     
 
 
