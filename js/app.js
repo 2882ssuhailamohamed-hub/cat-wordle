@@ -105,3 +105,17 @@ function setupEventListeners() {
     // Hint button
     elements.hintBtn.addEventListener('click', giveHint);
 }
+// Handle keyboard input
+function handleKeyPress(e) {
+    if (gameState.gameOver) return;
+    
+    const key = e.key.toUpperCase();
+    
+    if (key === 'ENTER') {
+        submitGuess();
+    } else if (key === 'BACKSPACE') {
+        deleteLetter();
+    } else if (/^[A-Z]$/.test(key)) {
+        handleLetterInput(key);
+    }
+}
