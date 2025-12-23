@@ -197,5 +197,27 @@ function submitGuess() {
         return;
     }
 
+      
+    // Continue game
+    showMessage(getFeedbackMessage(guess), "info");
+    
+    // Reset current guess and update UI
+    gameState.currentGuess = '';
+    renderWordDisplay();
+    updateKeyboard();
+    updateUI();
+}
+
+// Handle win
+function gameWon() {
+    gameState.gameWon = true;
+    gameState.gameOver = true;
+    gameState.score += gameState.attemptsLeft * 100 + 500;
+    gameState.stage = CONFIG.CAT_STAGES;
+    
+    // Show win message
+    showMessage(`🎉 You won! The word was ${gameState.word}! 🐱`, "success");
+
+
 
 
