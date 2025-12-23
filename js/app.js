@@ -187,5 +187,7 @@ function submitGuess() {
         updateCatStage(false);
     }
 
+// Update used letters
+    guess.split('').forEach(letter => gameState.usedLetters.add(letter));
 
 
