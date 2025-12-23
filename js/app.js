@@ -73,3 +73,35 @@ function initGame() {
 }
 
 
+// Select random word
+function selectRandomWord() {
+    const randomIndex = Math.floor(Math.random() * WORD_BANK.length);
+    gameState.word = WORD_BANK[randomIndex];
+    console.log("Word to guess:", gameState.word);
+}
+
+// Setup event listeners
+function setupEventListeners() {
+      // Keyboard input
+    document.addEventListener('keydown', handleKeyPress);
+    
+    // On-screen keyboard
+    document.querySelectorAll('.key[data-key]').forEach(key => {
+        key.addEventListener('click', () => {
+            if (!gameState.gameOver) {
+                handleLetterInput(key.dataset.key);
+            }
+        });
+    });
+    // Enter key
+    elements.enter.addEventListener('click', submitGuess);
+    
+    // Backspace key
+    elements.backspace.addEventListener('click', deleteLetter);
+    
+    // New game button
+    elements.newGameBtn.addEventListener('click', resetGame);
+    
+    // Hint button
+    elements.hintBtn.addEventListener('click', giveHint);
+}
