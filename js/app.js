@@ -191,3 +191,11 @@ function submitGuess() {
     guess.split('').forEach(letter => gameState.usedLetters.add(letter));
 
 
+        // Check lose condition
+    if (gameState.attemptsLeft === 0) {
+        gameLost();
+        return;
+    }
+
+
+
