@@ -119,3 +119,25 @@ function handleKeyPress(e) {
         handleLetterInput(key);
     }
 }
+
+
+
+
+
+// Handle letter input
+function handleLetterInput(letter) {
+    if (gameState.gameOver) return;
+    if (gameState.currentGuess.length < CONFIG.WORD_LENGTH) {
+        gameState.currentGuess += letter;
+        renderWordDisplay();
+    }
+}
+
+// Delete last letter
+function deleteLetter() {
+    if (gameState.gameOver) return;
+    if (gameState.currentGuess.length > 0) {
+        gameState.currentGuess = gameState.currentGuess.slice(0, -1);
+        renderWordDisplay();
+    }
+}
