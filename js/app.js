@@ -479,6 +479,32 @@ function giveHint() {
         const hintLetter = unguessedLetters[Math.floor(Math.random() * unguessedLetters.length)];
         const position = gameState.word.indexOf(hintLetter) + 1;
         showMessage(`Hint: The letter "${hintLetter}" is in position ${position} 🐾`, "info");
+    // Small penalty for using hint
+        gameState.score = Math.max(0, gameState.score - 50);
+        updateUI();
+    } else {
+        showMessage("You've already found all letters! Keep guessing! 🎯", "info");
+    }
+}
+
+// Reset game
+function resetGame() {
+    // Reset game state
+    gameState = {
+        word: '',
+        guesses: [],
+        currentGuess: '',
+        attemptsLeft: CONFIG.MAX_ATTEMPTS,
+        gameOver: false,
+        gameWon: false,
+        score: 0,
+        stage: 1,
+        usedLetters: new Set(),
+        startTime: null,
+        timer: null,
+        elapsedTime: 0
+    };
+    
 
     
 
